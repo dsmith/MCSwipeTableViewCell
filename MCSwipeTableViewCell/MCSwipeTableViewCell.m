@@ -32,9 +32,6 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
 @property (nonatomic, assign) BOOL isExited;
 
 @property (nonatomic, strong) UIPanGestureRecognizer *panGestureRecognizer;
-@property (nonatomic, strong) UIImageView *contentScreenshotView;
-@property (nonatomic, strong) UIView *colorIndicatorView;
-@property (nonatomic, strong) UIView *slidingView;
 @property (nonatomic, strong) UIView *activeView;
 
 // Initialization

@@ -59,6 +59,10 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 /** Delegate of `MCSwipeTableViewCell` */
 @property (nonatomic, assign) id <MCSwipeTableViewCellDelegate> delegate;
 
+@property (nonatomic, strong) UIImageView *contentScreenshotView;
+@property (nonatomic, strong) UIView *colorIndicatorView;
+@property (nonatomic, strong) UIView *slidingView;
+
 /** 
  * Damping of the physical spring animation. Expressed in percent.
  * 
