@@ -65,7 +65,7 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 
 @property (nonatomic, assign) CGFloat swipeViewTopInset;
 @property (nonatomic, assign) CGFloat swipeViewLeftInset;
-@property (nonatomic, assign) CGFLoat swipeViewWidth;
+@property (nonatomic, assign) CGFloat swipeViewWidth;
 @property (nonatomic, assign) CGFloat swipeViewHeight;
 
 /**
