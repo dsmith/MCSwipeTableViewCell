@@ -169,7 +169,7 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
     _colorIndicatorView = [[UIView alloc] initWithFrame:CGRectMake(self.swipeViewLeftInset + self.bounds.origin.x,
                                                                    self.swipeViewTopInset + self.bounds.origin.y,
                                                                    self.bounds.size.width,
-                                                                   self.bounds.size.height - self.swipeViewLeftInset)];
+                                                                   self.swipeViewHeight ? : self.bounds.size.height)];
     _colorIndicatorView.autoresizingMask = (UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth);
     _colorIndicatorView.backgroundColor = self.defaultColor ? self.defaultColor : [UIColor clearColor];
     [self addSubview:_colorIndicatorView];

@@ -65,6 +65,7 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 
 @property (nonatomic, assign) CGFloat swipeViewTopInset;
 @property (nonatomic, assign) CGFloat swipeViewLeftInset;
+@property (nonatomic, assign) CGFloat swipeViewHeight;
 
 /**
  * Damping of the physical spring animation. Expressed in percent.
