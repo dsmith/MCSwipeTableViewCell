@@ -600,6 +600,10 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
 - (void)swipeToOriginWithCompletion:(void(^)(void))completion {
     CGFloat bounceDistance = kMCBounceAmplitude * _currentPercentage;
     
+    if (self.finishOverlayView) {
+        [_contentScreenshotView addSubview:self.finishOverlayView];
+    }
+    
     if ([UIView.class respondsToSelector:@selector(animateWithDuration:delay:usingSpringWithDamping:initialSpringVelocity:options:animations:completion:)]) {
         
         [UIView animateWithDuration:_animationDuration delay:0.0 usingSpringWithDamping:_damping initialSpringVelocity:_velocity options:UIViewAnimationOptionCurveEaseInOut animations:^{
@@ -617,11 +621,12 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
         } completion:^(BOOL finished) {
             
             _isExited = NO;
-            [self uninstallSwipingView];
             
             if (completion) {
                 completion();
             }
+            
+            [self uninstallSwipingView];
         }];
     }
     
@@ -652,11 +657,12 @@ typedef NS_ENUM(NSUInteger, MCSwipeTableViewCellDirection) {
             } completion:^(BOOL finished2) {
                 
                 _isExited = NO;
-                [self uninstallSwipingView];
                 
                 if (completion) {
                     completion();
                 }
+                
+                [self uninstallSwipingView];
             }];
         }];
     }

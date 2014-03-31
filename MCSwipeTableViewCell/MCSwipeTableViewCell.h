@@ -59,6 +59,7 @@ typedef void (^MCSwipeCompletionBlock)(MCSwipeTableViewCell *cell, MCSwipeTableV
 /** Delegate of `MCSwipeTableViewCell` */
 @property (nonatomic, assign) id <MCSwipeTableViewCellDelegate> delegate;
 
+@property (nonatomic, strong) UIView *finishOverlayView;
 @property (nonatomic, strong) UIImageView *contentScreenshotView;
 @property (nonatomic, strong) UIView *colorIndicatorView;
 @property (nonatomic, strong) UIView *slidingView;
